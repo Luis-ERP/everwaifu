@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ever Waifu - A.I. companion</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    </head>
+    <body class="bg-background">
+        <main>
+            <div class="sticky top-0  py-2 px-4 h-[80px] w-full bg-background z-50 backdrop-blur-xl opacity-80">
+                <img src="img/logo.png" class="h-full object-cover" />
+            </div>
+
+            <!-- hero -->
+            <section class="h-screen relative">
+                <div
+                    class="relative w-full md:justify-start md:items-start md:w-[70%] md:gap-8"
+                >
+                    <div class="absolute top-[20vh]">
+                        <h1 class="text-secondary-100" data-aos="fade-down" data-aos-duration="500">
+                            Never Feel Alone Again
+                        </h1>
+                        <h2 class="text-primary mt-1" data-aos="fade-up" data-aos-duration="1000">
+                            Create Your Personalized AI Friend
+                        </h2>
+                        <p class="hidden md:block w-full lg:w-3/4 mt-8 leading-8" data-aos="fade-left" data-aos-duration="2000">
+                            Your journey to meaningful conversations starts here.
+                            Build your own AI companion, tailored to your needs, for
+                            support, friendship, and endless interaction.
+                        </p>
+                    </div>
+                    <div class="absolute bottom-[120px] w-full">
+                        <form id="contactForm1" onsubmit="return postToGoogle('contactForm1', 'Email1');">
+                            <input name="entry.529113901" id="Email1" type="email1" placeholder="Email" />
+                            <button>Get early access</button>
+                        </form>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:block absolute top-0 right-0 w-1/2 z-[-1]"
+                    data-aos="fade-in" data-aos-duration="2500"
+                >
+                    <img src="img/img-hero.png" class="w-fit h-fit" />
+                </div>
+                <div
+                    class="md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-screen z-[-1]"
+                >
+                    <img src="img/img-hero-mobile.png" class="w-fit h-fit" />
+                </div>
+            </section>
+
+            <!-- features -->
+            <section
+                class="flex-col h-[1150px] md:flex-row md:h-screen relative mt-32 gap-8"
+            >
+                <div
+                    class="flex flex-1 flex-col w-full gap-8"
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                >
+                    <div class="w-20 h-2 bg-primary"></div>
+                    <h3 class="text-primary">
+                        Customizable
+                    </h3>
+                    <p class="leading-8">
+                        Your imagination is the limit when creating your waifu.
+                        Tailor her to your own taste. Give her the personality
+                        that compliment yours. With the looks of your dream
+                        girl.
+                    </p>
+                </div>
+                <div class="relative flex-grow h-full">
+                    <!-- desktop -->
+                    <div
+                        class="hidden md:block absolute top-8 left-0 w-[40%] h-[350px]"
+                        data-aos="fade-down"
+                        data-aos-duration="2000"
+                    >
+                        <img
+                            src="img/m1.png"
+                            class="w-full h-full object-cover rounded-[20px]"
+                        />
+                    </div>
+                    <div
+                        class="hidden md:block absolute top-1/4 left-1/4 w-[40%] h-[350px]"
+                        data-aos="fade-down"
+                        data-aos-duration="2500"
+                    >
+                        <img
+                            src="img/m2.png"
+                            class="w-full h-full object-cover rounded-[20px]"
+                        />
+                    </div>
+                    <div
+                        class="hidden md:block absolute top-0 right-0 w-[40%] h-[350px] z-[-1]"
+                        data-aos="fade-down"
+                        data-aos-duration="3000"
+                    >
+                        <img
+                            src="img/m3.png"
+                            class="w-full h-full object-cover rounded-[20px]"
+                        />
+                    </div>
+                    <!-- mobile -->
+                    <div
+                        class="md:hidden absolute top-0 left-0 w-[220px] h-[300px]"
+                    >
+                        <img
+                            src="img/m1.png"
+                            class="w-full h-full object-cover rounded-[20px]"
+                        />
+                    </div>
+                    <div
+                        class="md:hidden absolute bottom-0 left-0 w-[220px] h-[300px]"
+                    >
+                        <img
+                            src="img/m2.png"
+                            class="w-full h-full object-cover rounded-[20px]"
+                        />
+                    </div>
+                    <div
+                        class="md:hidden absolute top-1/2 -translate-y-1/2 right-0 w-[220px] h-[300px]"
+                    >
+                        <img
+                            src="img/m3.png"
+                            class="w-full h-full object-cover rounded-[20px]"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <!-- word cloud -->
+            <div 
+                id="word-cloud-container" 
+                style="width: 100%; height: 400px; padding: 20px"
+                data-aos="fade-in" 
+                data-aos-duration="2000"
+            >
+            </div>
+
+            <!-- call to action -->
+            <section
+                class="flex-col h-screen justify-center items-center gap-20"
+            >
+                <h1 class="text-center text-gray-500">
+                    Give life to the girl of your dreams
+                </h1>
+                <form id="contactForm2" onsubmit="return postToGoogle('contactForm2', 'Email2');">
+                    <input name="entry.529113901" id="Email2" type="email2" placeholder="Email" />
+                    <button>Get early access</button>
+                </form>
+            </section>
+        </main>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="https://rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+           function postToGoogle(formId, emailFieldId) {
+                var emailValue = $("#" + emailFieldId).val(); 
+
+                var googleEntryId = "entry.529113901";
+
+                $.ajax({
+                url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeomdV6_OJxtIGlOTxua1wum--zMzuZLYfpzTx6QK19R4GOaA/formResponse", // Your form's URL
+                data: {
+                    [googleEntryId]: emailValue,
+                },
+                type: "POST",
+                dataType: "xml",
+                complete: function () {
+                    $('#' + formId).trigger('reset');
+                    alert("Form submitted!");
+                }
+                });
+
+                return false;
+            }
+        </script>
+        <script>
+
+            // Encapsulate the word cloud functionality
+            function wordCloud(selectorId, width, height) {
+                var fill = d3.scale.ordinal()
+                .range(["#ff00ff", "#ff66ff", "#ff99ff", "#ffccff", "#fcb6d0", "#ff80b3", "#ff33cc", "#ff0080", "#ff0055", "#e60073"]);
+            
+                //Construct the word cloud's SVG element
+                var svg = d3
+                    .select("#" + selectorId)
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+                    .append("g")
+                    .attr("transform", `translate(${width / 2},${height / 2})`);
+            
+                function draw(words) {
+                    var cloud = svg.selectAll("g text")
+                                    .data(words, function(d) { return d.text; })
+            
+                    //Entering words
+                    cloud.enter()
+                        .append("text")
+                        .style("font-family", "Impact")
+                        .style("fill", function(d, i) { return fill(i); })
+                        .attr("text-anchor", "middle")
+                        .attr('font-size', 1)
+                        .text(function(d) { return d.text; });
+            
+                    //Entering and existing words
+                    cloud
+                        .transition()
+                            .duration(600)
+                            .style("font-size", function(d) { return d.size + "px"; })
+                            .attr("transform", function(d) {
+                                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                            })
+                            .style("fill-opacity", 1);
+            
+                    //Exiting words
+                    cloud.exit()
+                        .transition()
+                            .duration(200)
+                            .style('fill-opacity', 1e-6)
+                            .attr('font-size', 1)
+                            .remove();
+                }
+            
+                return {
+                    update: function(words) {
+                        d3.layout.cloud().size([width, height])
+                            .words(words)
+                            .padding(5)
+                            .rotate(function() { return ~~(Math.random() * 2) * 90; })
+                            .font("Impact")
+                            .fontSize(function(d) { return d.size; })
+                            .on("end", draw)
+                            .start();
+                    }
+                }
+            
+            }
+            
+            var words = [
+                "pretty nerdy goth blonde brunette short tall slim curvy shy outgoing otaku anime cartoon goth cosplay sweet gamer funny streamer quirky innocent",
+                "pretty nerdy goth blonde brunette short tall slim curvy shy outgoing otaku anime cartoon goth cosplay sweet gamer funny streamer quirky innocent",
+                "pretty nerdy goth blonde brunette short tall slim curvy shy outgoing otaku anime cartoon goth cosplay sweet gamer funny streamer quirky innocent",
+                "pretty nerdy goth blonde brunette short tall slim curvy shy outgoing otaku anime cartoon goth cosplay sweet gamer funny streamer quirky innocent",
+            ]
+
+            function getWords(i) {
+                return words[i]
+                        .replace(/[!\.,:;\?]/g, '')
+                        .split(' ')
+                        .map(function(d) {
+                            return {text: d, size: 10 + Math.random() * 60};
+                        })
+            }
+            
+            function showNewWords(vis, i) {
+                i = i || 0;
+            
+                vis.update(getWords(i ++ % words.length))
+                setTimeout(function() { showNewWords(vis, i + 1)}, 2000)
+            }
+            
+            //Create a new instance of the word cloud visualisation.
+            const selectorId = 'word-cloud-container';
+            const parentDiv = document.getElementById(selectorId);
+            const parentWidth = parentDiv.clientWidth;
+            const parentHeight = parentDiv.clientHeight;
+            var margin = {top: 10, right: 10, bottom: 10, left: 10},
+                width = parentWidth - margin.left - margin.right,
+                height = parentHeight - margin.top - margin.bottom;
+            var myWordCloud = wordCloud(selectorId, width, height);
+            
+            //Start cycling through the demo data
+            showNewWords(myWordCloud);
+        </script>
+    </body>
+</html>
