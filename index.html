@@ -10,17 +10,16 @@
         <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     </head>
     <body class="bg-background">
+        <div style="position: fixed; top: 0; padding: 0.5rem 1rem; height: 80px; width: 100%; background-color: var(--background); z-index: 50; backdrop-filter: blur(50px); opacity: 0.9;">
+            <img src="img/logo.png" style="height: 100%; object-fit: cover;" />
+        </div>
         <main>
-            <div class="sticky top-0  py-2 px-4 h-[80px] w-full bg-background z-50 backdrop-blur-xl opacity-80">
-                <img src="img/logo.png" class="h-full object-cover" />
-            </div>
-
             <!-- hero -->
             <section class="h-screen relative">
                 <div
                     class="relative w-full md:justify-start md:items-start md:w-[70%] md:gap-8"
                 >
-                    <div class="absolute top-[11vh]" >
+                    <div class="absolute top-[20vh]" >
                         <h1 class="text-secondary-100" data-aos="fade-down" data-aos-duration="500">
                             Never Feel Alone Again
                         </h1>
@@ -155,6 +154,14 @@
                 </form>
             </section>
         </main>
+
+        <footer>
+            <div class="flex justify-center items-center h-20">
+                <p>
+                    &copy; 2024 Ever Waifu. All rights reserved.
+                </p>
+            </div>
+        </footer>
 
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="https://d3js.org/d3.v3.min.js"></script>
