@@ -29,10 +29,6 @@ input {
     color: white;
 }
 
-input::placeholder {
-    color: white;
-}
-
 @media (min-width: 768px) {
     input {
         border-radius: 0.5rem 0 0 0.5rem;
@@ -58,6 +54,10 @@ button {
         border-radius: 0 0.5rem 0.5rem 0;
         border-top: 3px solid #FF3399;
         border-left: 0;
+    }
+
+    input::placeholder {
+        color: #6b7280; /* gray-500 */
     }
 }
 
