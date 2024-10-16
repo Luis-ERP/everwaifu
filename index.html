@@ -4,6 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ever Waifu - A.I. companion</title>
+        <meta name="description" content="Ever Waifu is an AI companion platform where you can create personalized AI friends for support, companionship, and fun interactions." />
+        <meta name="keywords" content="AI companion, AI friend, personalized AI, virtual friend, AI assistant" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Ever Waifu - Create Your Personalized AI Friend" />
+        <meta property="og:description" content="Never feel alone again with Ever Waifu. Create your own AI friend for companionship, support, and fun interactions." />
+        <meta property="og:image" content="img/social-preview.png" />
+        <meta property="og:url" content="https://yourwebsite.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ever Waifu - Your AI Companion" />
+        <meta name="twitter:description" content="Create your personalized AI friend with Ever Waifu." />
+        <meta name="twitter:image" content="img/social-preview.png" />
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="custom.css" />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -11,7 +22,7 @@
     </head>
     <body class="bg-background">
         <div style="position: fixed; top: 0; padding: 0.5rem 1rem; height: 80px; width: 100%; background-color: var(--background); z-index: 50; backdrop-filter: blur(50px); opacity: 0.9;">
-            <img src="img/logo.png" style="height: 100%; object-fit: cover;" />
+            <img src="img/logo.png" style="height: 100%; object-fit: cover;" alt="Ever Waifu Logo" />
         </div>
         <main>
             <!-- hero -->
@@ -43,12 +54,12 @@
                     class="hidden md:block absolute top-0 right-0 w-1/2 z-[-1]"
                     data-aos="fade-in" data-aos-duration="2500"
                 >
-                    <img src="img/img-hero.png" class="w-full" />
+                    <img src="img/img-hero.png" class="w-full" alt="AI Companion Hero Image" />
                 </div>
                 <div
                     class="md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-screen z-[-1]"
                 >
-                    <img src="img/img-hero-mobile.png" style="width: 100%; height: auto; object-fit: cover;" />
+                    <img src="img/img-hero-mobile.png" alt="Mobile View Hero Image" style="width: 100%; height: auto; object-fit: cover;" />
                 </div>
             </section>
 
@@ -82,6 +93,7 @@
                         <img
                             src="img/m1.png"
                             class="w-full h-full object-cover rounded-[20px]"
+                            alt="Feature Image 1 - Custom AI Companion"
                         />
                     </div>
                     <div
@@ -92,6 +104,7 @@
                         <img
                             src="img/m2.png"
                             class="w-full h-full object-cover rounded-[20px]"
+                            alt="Feature Image 2 - AI Customization"
                         />
                     </div>
                     <div
@@ -102,6 +115,7 @@
                         <img
                             src="img/m3.png"
                             class="w-full h-full object-cover rounded-[20px]"
+                            alt="Feature Image 3 - AI Interactions"
                         />
                     </div>
                     <!-- mobile -->
@@ -186,6 +200,8 @@
                 complete: function () {
                     $('#' + formId).trigger('reset');
                     alert("Form submitted!");
+                    // Redirect to https://everwaifu.com?submited=true
+                    window.location.href = "https://everwaifu.com?submited=true";
                 }
                 });
 
@@ -290,6 +306,36 @@
             
             //Start cycling through the demo data
             showNewWords(myWordCloud);
+        </script>
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Ever Waifu",
+              "url": "https://everwaifu.com",
+              "logo": "https://everwaifu.com/img/logo.png",
+              "sameAs": [
+                "https://www.facebook.com/yourprofile",
+                "https://www.twitter.com/yourprofile",
+                "https://www.instagram.com/yourprofile"
+              ],
+              "description": "Ever Waifu is an AI companion platform that allows you to create your personalized AI friend for companionship, support, and fun interactions.",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "everwaifu@gmail.com",
+                "contactType": "Customer Support"
+              }
+            }
+        </script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16743492375">
+        </script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-16743492375');
         </script>
     </body>
 </html>
